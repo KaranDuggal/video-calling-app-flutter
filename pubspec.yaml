@@ -38,6 +38,7 @@ dependencies:
   shared_preferences: ^2.1.2
   uuid: ^3.0.7
   flutter_webrtc_wrapper: ^1.0.2
+  http: ^1.0.0
 
 dev_dependencies:
   flutter_test:

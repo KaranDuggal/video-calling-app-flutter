@@ -1,0 +1,12 @@
+flutter clean && flutter build apk --build-name=1.0.7 --build-number=7
+flutter clean && flutter build appbundle
+flutter clean && flutter pub get
+
+flutter clean && flutter pub get && flutter pub run flutter_native_splash:create
+
+/snap/android-studio/125/android-studio/jre/bin/keytool -genkey -v -keystore ~/upload-keystore.jks -keyalg RSA -keysize 2048 -validity 10000 -alias upload
+
+Internet Access :- Add this to file android/app/src/main/AndroidManifest.xml after the package name:
+<uses-permission android:name="android.permission.INTERNET"/> 
+
+for getting SHA1 key :-/snap/android-studio/125/android-studio/jre/bin/keytool -list -v -keystore ~/.android/debug.keystore -alias androiddebugkey -storepass android -keypass android

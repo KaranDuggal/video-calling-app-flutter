@@ -65,7 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         var response = await startMeeting();
                         final body = json.decode(response!.body);
                         final meetingId = body['data'];
-                        validateMeeting(meetingId);
+                        validateMeeting(meetingId['_id']);
                       })
                     ),
                   ],

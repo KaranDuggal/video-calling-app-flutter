@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import '../utils/user.utils.dart';
-String meetingApiUrl = 'https://icy-lizards-drum.loca.lt/api/meeting';
+String meetingApiUrl = 'https://e768-49-156-72-53.in.ngrok.io/api/meeting';
 var client = http.Client();
 
 Future<http.Response?> startMeeting() async{
@@ -27,7 +27,7 @@ Future<http.Response?> joinMeeting(String meetingId) async{
     'content-Type':'application/json'
   };
   var response = await client.get(Uri.parse('$meetingApiUrl/join?meetingId=$meetingId'),headers: requestHeader);
-  if(response.statusCode >= 200 && response.statusCode >= 400){
+  if(response.statusCode >= 200 && response.statusCode <= 400){
     return response;
   }
   throw UnsupportedError('Not Found meeting');

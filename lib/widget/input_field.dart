@@ -20,7 +20,7 @@ class InputField extends StatelessWidget {
           borderSide: const BorderSide(),
         ),
       ),
-      style: Theme.of(context).textTheme.displaySmall,
+      style: Theme.of(context).textTheme.bodyMedium,
       controller: controller,
       readOnly: readOnly,
       validator: validator,

@@ -12,7 +12,7 @@ class Button extends StatelessWidget {
         padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
-            color: Theme.of(context).colorScheme.secondary,
+            color: Theme.of(context).colorScheme.background,
             boxShadow: [
               BoxShadow(
                 blurRadius: 5,
@@ -27,7 +27,7 @@ class Button extends StatelessWidget {
             ]
         ),
         child: Center(
-          child: Text(title,style: Theme.of(context).textTheme.displaySmall,),
+          child: Text(title,style: Theme.of(context).textTheme.bodySmall,),
         ),
       ),
     );

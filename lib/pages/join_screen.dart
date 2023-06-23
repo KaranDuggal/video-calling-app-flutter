@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:video_calling_app/models/meeting_details.dart';
+import 'package:video_calling_app/pages/meeting_screen.dart';
 
 import '../widget/button.dart';
 import '../widget/input_field.dart';
@@ -14,7 +15,7 @@ class JoinScreen extends StatefulWidget {
 
 class _JoinScreenState extends State<JoinScreen> {
   static final GlobalKey<FormState> globalKey = GlobalKey<FormState>();
-  String meetingId = '';
+  String userName = '';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +41,7 @@ class _JoinScreenState extends State<JoinScreen> {
                     return null;
                   },
                   onChanged: (val){
-                    meetingId = val;
+                    userName = val;
                   },
                 ),
                 const SizedBox(height: 20,),
@@ -49,7 +50,7 @@ class _JoinScreenState extends State<JoinScreen> {
                     Flexible(
                       child: Button(title: 'Join meting', onTap: (){
                         if(validateAndSave()){
-                          // validateMeeting(meetingId);
+                          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> MeetingScreen(meetingId: widget.meetingDetail!.id,meetingDetail: widget.meetingDetail!,name: userName,)));
                         }
                       })
                     ),

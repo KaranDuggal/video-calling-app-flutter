@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:video_calling_app/pages/home_screen.dart';
-import 'package:video_calling_app/pages/join_screen.dart';
 
 void main() {
   runApp(const MyApp());

@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:video_calling_app/widget/button.dart';
 
 class ControlPanel extends StatelessWidget {
-  const ControlPanel({super.key, this.audioEnabled, this.videoEnabled, this.isConnectionFailed, this.onVideoToggle,this.onAudioToggle, this.onMeetingEnd, this.onReconnectToggle});
+  const ControlPanel({super.key, this.audioEnabled, this.videoEnabled, this.isConnectionFailed, this.onVideoToggle,this.onAudioToggle, this.onMeetingEnd, this.onReconnect});
 
   final bool? videoEnabled;
   final bool? audioEnabled;
   final bool? isConnectionFailed;
   final VoidCallback? onVideoToggle;
   final VoidCallback? onAudioToggle;
-  final VoidCallback? onReconnectToggle;
+  final VoidCallback? onReconnect;
   final VoidCallback? onMeetingEnd;
 
   @override
@@ -55,7 +55,7 @@ class ControlPanel extends StatelessWidget {
       ];
     }
     return <Widget>[
-      Button(title: 'Reconnect', onTap: onReconnectToggle)
+      Button(title: 'Reconnect', onTap: onReconnect)
     ];
   }
 }

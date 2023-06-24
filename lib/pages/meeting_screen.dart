@@ -195,7 +195,7 @@ class _MeetingScreenState extends State<MeetingScreen> {
   void onAudioToggle() {
     if(meetingHelper != null){
       setState(() {
-        meetingHelper!.toggleVideo();
+        meetingHelper!.toggleAudio();
       });
     }
   }
@@ -203,7 +203,7 @@ class _MeetingScreenState extends State<MeetingScreen> {
   void onVideoToggle() {
     if(meetingHelper != null){
       setState(() {
-        meetingHelper!.toggleAudio();
+        meetingHelper!.toggleVideo();
       });
     }
   }

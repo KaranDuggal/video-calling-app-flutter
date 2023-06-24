@@ -29,7 +29,7 @@ class ControlPanel extends StatelessWidget {
       return <Widget>[
         IconButton(
           onPressed: onVideoToggle, 
-          icon: Icon(audioEnabled! ? Icons.videocam : Icons.videocam_off),
+          icon: Icon(videoEnabled! ? Icons.videocam : Icons.videocam_off),
           color: Colors.white,
           iconSize: 32,
         ),

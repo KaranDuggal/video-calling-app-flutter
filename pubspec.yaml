@@ -39,6 +39,7 @@ dependencies:
   uuid: ^3.0.7
   flutter_webrtc_wrapper: ^1.0.2
   http: ^1.0.0
+  socket_io_client: ^2.0.2
 
 dev_dependencies:
   flutter_test:

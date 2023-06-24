@@ -65,7 +65,7 @@ class _MeetingScreenState extends State<MeetingScreen> {
   void startMeeting() async{
     final String userId = await loadUserId();
     meetingHelper = WebRTCMeetingHelper(
-      url: ' https://599e-49-156-77-65.in.ngrok.io',
+      url: 'https://e51f-49-156-94-68.ngrok-free.app',
       meetingId: widget.meetingDetail.id,
       userId: userId,
       name:widget.name
@@ -168,13 +168,13 @@ class _MeetingScreenState extends State<MeetingScreen> {
               );
             }
           )
-        ) : const Center(
+        ) : Center(
           child: Padding(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             child: Text(
-              'waiting for participates to join the meeting',
+              'waiting for participates to join the meeting ${meetingHelper != null ? meetingHelper!.connections.length : 'null'}',
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.grey,
                 fontSize: 25
               ),
@@ -182,6 +182,8 @@ class _MeetingScreenState extends State<MeetingScreen> {
           ),
         ),
         Positioned(
+          bottom: 20,
+          right: 0,
           child: SizedBox(
             width: 150,
             height: 200,

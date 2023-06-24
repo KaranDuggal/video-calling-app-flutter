@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import '../utils/user.utils.dart';
-String meetingApiUrl = 'https://599e-49-156-77-65.in.ngrok.io/api/meeting';
+String meetingApiUrl = 'https://e51f-49-156-94-68.ngrok-free.app/api/meeting';
 var client = http.Client();
 
 Future<http.Response?> startMeeting() async{
